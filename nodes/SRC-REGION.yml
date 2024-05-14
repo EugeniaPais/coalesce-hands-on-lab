@@ -1,0 +1,63 @@
+steps:
+  REGION-d6c53ae7-d3ed-40a4-9261-60d1f607ef5f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d9e2e58-637d-4a92-9195-6f83d5699394
+              stepCounter: d6c53ae7-d3ed-40a4-9261-60d1f607ef5f
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b42dcaa4-7c63-439a-9b9f-fff60f7e3c1f
+              stepCounter: d6c53ae7-d3ed-40a4-9261-60d1f607ef5f
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 329e93be-9144-4a30-9cb5-889fbd7930cb
+              stepCounter: d6c53ae7-d3ed-40a4-9261-60d1f607ef5f
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: d6c53ae7-d3ed-40a4-9261-60d1f607ef5f
